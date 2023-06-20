@@ -11,8 +11,9 @@ RUN apk add --update \
 
 WORKDIR /opt
 
+
 # Build and install all SCTK tools
-RUN git clone https://github.com/usnistgov/SCTK \
+RUN git clone https://github.com/IZZARA-URA/SCTK.git \
  && cd SCTK \
  && make config \
  && make all \
@@ -22,4 +23,6 @@ RUN git clone https://github.com/usnistgov/SCTK \
 
 WORKDIR /var/sctk
 
+
 CMD ["sclite"]
+
